@@ -19,7 +19,7 @@ export default class Citizen{
     }
 
     toString(){
-        return `${this.name}, Citizen, Rank return ${this.name}`;
+        return `${this.name}, Citizen, Rank  ${this.rank}`;
     }
 
     /* Math.random() gives a value from 0 to <1
