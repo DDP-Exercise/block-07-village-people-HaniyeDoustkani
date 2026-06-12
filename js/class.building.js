@@ -50,13 +50,24 @@ export default class Building{
         return lowestResident;
     }
 
-    removeResident(citizen){
-        // TODO If nobles!
+    removeResident(citizen) {
 
-        this.residents.splice(this.residents.indexOf(citizen), 1);
-        citizen.home = null;
+        // TODO If nobles!
+        let index = this.residents.indexOf(citizen);
+        if (index !== -1) {
+            this.residents.splice(index, 1);
+            citizen.home = null;
+        }
     }
     listAllResidents(){
+
+        console.log(
+            "%cResidents of " + this.name + " (" + this.residents.length + "/" + this.capacity + "):",
+            "background-color: #990; color: white"
+        );
+        for(const resident of this.residents){
+            console.log(resident.toString());
+        }
 
     }
 }
