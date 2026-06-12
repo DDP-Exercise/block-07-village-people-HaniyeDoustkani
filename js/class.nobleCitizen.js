@@ -6,15 +6,15 @@ import Citizen from "./class.citizen.js";
  * representation in the Citizen Dictionary (see the img folder).
  */
 
-export default class NobelCitizen extends Citizen {
-    constructor() {
+export default class NobleCitizen extends Citizen {
+    constructor(name) {
         super(name);
         this.rank = 1;
 
     }
 
     toString(){
-        return `${this.name}, Nobel Citizen` ;
+        return `${this.name}, Noble Citizen` ;
 
     }
 };
