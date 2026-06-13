@@ -7,6 +7,17 @@
 
 import Building from "./class.building.js";
 
-export default class NobleBuilding extends Building{
-    
+export default class NobleBuilding extends Building {
+
+
+    constructor(name, capacity) {
+        super(name, capacity);
+
+    }
+
+    addResident(citizen) {
+        if (citizen.rank === 1)
+            return super.addResident(citizen);
+        return fals;
+    }
 }
